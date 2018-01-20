@@ -8,8 +8,8 @@ RSpec.feature "deleting posts", type: :feature do
 
   scenario "User can delete a post" do
     find(:xpath, "//a[contains(@href,'posts/2')]").click
-    click_on "delete"
 
+    expect { delete_post }.to change{ Post.count }.by -1
     expect(page).to have_content("Post deleted")
     expect(page).to_not have_content("To be deleted")
   end
