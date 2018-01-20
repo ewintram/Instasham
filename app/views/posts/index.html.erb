@@ -8,6 +8,13 @@
   <body>
     <h1>Instagram</h1>
     <%= link_to "new post", new_post_path %>
-
+    <table>
+      <% @posts.each do |post| %>
+        <tr>
+          <td><%= image_tag post.image.url(:medium) %></td>
+          <td><%= post.caption %></td>
+        </tr>
+      <% end %>
+    </table>
   </body>
 </html>
