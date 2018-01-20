@@ -6,8 +6,9 @@
     </title>
   </head>
   <body>
-    <%= image_tag @post.image.url(:medium) %>
-    <%= @post.caption %>
-    <%= link_to "edit", edit_post_path(@post) %>
+    <h1>Edit post</h1>
+    <%= render "form" %>
+
+    <%= link_to "Back", posts_path %>
   </body>
 </html>

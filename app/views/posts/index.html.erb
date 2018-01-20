@@ -11,9 +11,7 @@
     <table>
       <% @posts.each do |post| %>
         <tr>
-          <td><%= link_to(image_tag(post.image.url(:medium)), post_path(post)) %>
-
-          </td>
+          <td><%= link_to(image_tag(post.image.url(:medium)), post_path(post)) %></td>
           <td><%= post.caption %></td>
         </tr>
       <% end %>
