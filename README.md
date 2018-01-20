@@ -30,7 +30,7 @@ Things you may want to cover:
 ```
 As a user
 So that I can show an online audience that my breakfast habits are on fleek
-I want to post a photo of my breakfast on my Instagram page
+I want to post a photo of my breakfast on my Instagram page with a caption
 ```
 
 ```
