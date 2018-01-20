@@ -15,4 +15,12 @@ RSpec.feature "Creating a post", type: :feature do
     expect(page).to have_content "#avotoast"
     expect(page).to have_css "img[src*='avo-toast.jpg']"
   end
+
+  scenario "User must include a photo in a post" do
+    visit "/"
+    click_on "new post"
+    fill_in "post[caption]", with: "No picture because YOLO"
+    click_on "Create Post"
+    expect(page).to have_content "Posts must have an image"
+  end
 end

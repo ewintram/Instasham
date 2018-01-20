@@ -8,7 +8,13 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.create(post_params)
-    redirect_to @post
+    if @post.save
+      flash[:success] = "Your post has been shared"
+      redirect_to @post
+    else
+      flash[:alert] = "Posts must have an image"
+      render "new"
+    end
   end
 
   def show
