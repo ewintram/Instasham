@@ -5,7 +5,7 @@ RSpec.feature "Single post view", type: :feature do
     post = create(:post)
 
     visit "/"
-    find(:xpath, "//a[contains(@href,'posts/5')]").click
+    find(:xpath, "//a[contains(@href,'posts/6')]").click
     expect(current_path).to eq(post_path(post))
   end
 end
