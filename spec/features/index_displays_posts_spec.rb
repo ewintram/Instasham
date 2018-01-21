@@ -13,5 +13,8 @@ RSpec.feature "Displaying all posts on index page", type: :feature do
     expect(page).to have_content("Is it a chihuahua?")
     expect(page).to have_content("Or is it a blueberry muffin?")
     expect(page).to have_css("img[src*='avo-toast.jpg']")
+    within "table" do
+      expect(page).to have_content("ewintram")
+    end
   end
 end

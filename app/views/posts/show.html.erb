@@ -6,10 +6,15 @@
     </title>
   </head>
   <body>
-    <%= image_tag @post.image.url(:medium) %>
-    <p>
-      <%= @post.caption %>
-    </p>
+    <post>
+      <p>
+        <%= @post.user.username %>
+      </p>
+      <%= image_tag @post.image.url(:medium) %>
+      <p>
+        <%= @post.caption %>
+      </p>
+    </post>
     <p>
       <%= link_to "back", posts_path %>
       <% if user_signed_in? %>
@@ -22,6 +27,7 @@
     </p>
     <p>
       <% if @post.comments.count > 0 %>
+        <strong>Comments</strong>
         <%= render @post.comments.select(&:persisted?) %>
       <% end %>
     </p>

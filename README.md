@@ -36,7 +36,7 @@ I want to post a photo of my breakfast on my Instagram page with a caption
 ```
 As a user
 In case avocado on toast is no longer on trend
-I want to be able to delete my photo from my Instagram page
+I want to be able to delete my post from my Instagram page
 ```
 
 ```
@@ -99,7 +99,7 @@ A photo must have a registered user associated to it
 
 ```
 As a user
-So that no one can delete my photos
+So that no one can delete my posts and comments
 I want to be the only one who can delete them
 ```
 

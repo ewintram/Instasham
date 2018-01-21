@@ -7,8 +7,11 @@ RSpec.feature "viewing posts", type: :feature do
   scenario "User can click on a post's photo to view the post" do
     create_post(caption: "")
     visit "/"
-
     find(:xpath, "//a[contains(@href,'posts/15')]").click
+
     expect(current_path).to eq('/posts/15')
+    within "post" do
+      expect(page).to have_content "ewintram"
+    end
   end
 end

@@ -11,5 +11,8 @@ RSpec.feature "creating comments", type: :feature do
     expect{ create_comment(comment: "Nice pic") }.to change{ Comment.count }.by 1
     expect(current_path).to eq('/posts/1')
     expect(page).to have_content("Nice pic")
+    within "table" do
+      expect(page).to have_content("ewintram")
+    end
   end
 end
