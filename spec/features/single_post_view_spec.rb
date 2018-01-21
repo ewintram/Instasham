@@ -6,7 +6,7 @@ RSpec.feature "viewing posts", type: :feature do
     # p post
     visit "/"
 
-    find(:xpath, "//a[contains(@href,'posts/8')]").click
+    find(:xpath, "//a[contains(@href,'posts/9')]").click
     expect(current_path).to eq(post_path(post))
   end
 end

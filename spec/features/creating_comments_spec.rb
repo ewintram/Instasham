@@ -4,6 +4,9 @@ RSpec.feature "creating comments", type: :feature do
 
   scenario "User can add a comment to a post and view it" do
     post = create(:post)
+    # p post
+    visit "/"
+    find(:xpath, "//a[contains(@href,'posts/1')]").click
 
     expect{ create_comment(comment: "Nice pic") }.to change{ Comment.count }.by 1
     expect(current_path).to eq(post_path(post))

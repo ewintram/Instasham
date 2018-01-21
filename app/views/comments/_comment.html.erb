@@ -8,7 +8,11 @@
   <body>
     <p>
       <strong>Comments</strong>
-      <%= comment.comment %>
+      <p>
+        <%= comment.comment %>
+      </p>
+      <%= link_to "edit comment", edit_post_comment_path(@post, comment) %>
+
     </p>
   </body>
 </html>
