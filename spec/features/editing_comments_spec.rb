@@ -20,4 +20,14 @@ RSpec.feature "editing comments", type: :feature do
     expect(page).to have_content("Edited comment")
     expect(page).not_to have_content("Nice pic")
   end
+
+  # scenario "User can only edit their own comments" do
+  #   create_comment(comment: "Nice pic")
+  #   click_on "sign out"
+  #   sign_up(email: "david@example.com", username: "dwright", password: "password123", password_confirmation: "password123")
+  #   visit "/"
+  #   find(:xpath, "//a[contains(@href,'posts/6')]").click
+  #
+  #   expect(page).not_to have_content "edit comment"
+  # end
 end

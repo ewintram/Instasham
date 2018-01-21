@@ -36,7 +36,7 @@ I want to post a photo of my breakfast on my Instagram page with a caption
 ```
 As a user
 In case avocado on toast is no longer on trend
-I want to be delete my photo from my Instagram page
+I want to be able to delete my photo from my Instagram page
 ```
 
 ```
@@ -74,7 +74,7 @@ I want to be able to sign up
 ```
 As a registered user
 So that I can record my activity on the website
-I want to be able to sign in
+I want to sign in and see a custom welcome message
 ```
 
 ```

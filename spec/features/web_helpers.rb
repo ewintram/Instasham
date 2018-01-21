@@ -6,7 +6,17 @@ module Helpers
     fill_in 'user[username]', with: username
     fill_in 'user[password]', with: password
     fill_in 'user[password_confirmation]', with: password_confirmation
-    click_button "Sign up"
+    click_button "sign up"
+  end
+
+  def sign_in(username: username, password: password)
+    visit "/"
+    click_on "sign in"
+    fill_in 'user[login]', with: username
+    fill_in 'user[password]', with: password
+    within "form" do
+      click_on "sign in"
+    end
   end
 
   def create_post(caption: caption)
