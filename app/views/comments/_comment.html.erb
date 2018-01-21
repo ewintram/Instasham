@@ -8,7 +8,7 @@
   <body>
     <table>
       <th>
-        <%= comment.post.user.username %>
+        <%= User.find(comment.user_id).username %>
       </th>
       <tr>
         <td><%= comment.comment %></td>
