@@ -5,7 +5,7 @@ RSpec.feature "editing comments", type: :feature do
     post = create(:post)
     # p post
     visit "/"
-    find(:xpath, "//a[contains(@href,'posts/4')]").click
+    find(:xpath, "//a[contains(@href,'posts/6')]").click
 
     create_comment(comment: "Nice pic")
     click_on "edit comment"

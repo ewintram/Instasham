@@ -1,6 +1,6 @@
 class Post < ApplicationRecord
-  has_many :comments
-  
+  has_many :comments, dependent: :destroy
+
   validates :image, presence: true
 
   has_attached_file :image, styles: { :medium => "640x" }

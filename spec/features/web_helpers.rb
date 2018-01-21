@@ -17,4 +17,8 @@ module Helpers
     click_on "Create Comment"
   end
 
+  def delete_comment
+    click_on "delete comment"
+  end
+
 end

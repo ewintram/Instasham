@@ -12,7 +12,9 @@
         <%= comment.comment %>
       </p>
       <%= link_to "edit comment", edit_post_comment_path(@post, comment) %>
-
+      <%= link_to "delete comment", [comment.post, comment],
+                   method: :delete,
+                   data: { confirm: 'Are you sure?' }  %>
     </p>
   </body>
 </html>
