@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.feature "Creating a post", type: :feature do
+RSpec.feature "creating posts", type: :feature do
 
   # before(:each) do
   #   sign_up()

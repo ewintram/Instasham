@@ -4,10 +4,11 @@ RSpec.feature "editing posts", type: :feature do
   before(:each) do
     post = create(:post)
     visit "/"
+    # p post
   end
 
   scenario "User can edit a post" do
-    find(:xpath, "//a[contains(@href,'posts/3')]").click
+    find(:xpath, "//a[contains(@href,'posts/4')]").click
     click_on "edit"
     fill_in "post[caption]", with: "Edited caption"
     click_on "Update Post"
@@ -18,7 +19,7 @@ RSpec.feature "editing posts", type: :feature do
   end
 
   scenario "User cannot edit a post with a non-image file" do
-    find(:xpath, "//a[contains(@href,'posts/4')]").click
+    find(:xpath, "//a[contains(@href,'posts/5')]").click
     click_on "edit"
     attach_file("post[image]", "spec/files/images/test.xlsx")
     click_on "Update Post"

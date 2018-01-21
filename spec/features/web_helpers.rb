@@ -12,4 +12,11 @@ module Helpers
     click_on "delete"
   end
 
+  def create_comment(comment: comment)
+    visit "/"
+    find(:xpath, "//a[contains(@href,'posts/1')]").click
+    fill_in "comment[comment]", with: comment
+    click_on "Create Comment"
+  end
+
 end

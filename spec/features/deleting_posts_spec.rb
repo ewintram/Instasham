@@ -4,10 +4,11 @@ RSpec.feature "deleting posts", type: :feature do
   before do
     post = create(:post, caption: "To be deleted")
     visit "/"
+    # p post
   end
 
   scenario "User can delete a post" do
-    find(:xpath, "//a[contains(@href,'posts/2')]").click
+    find(:xpath, "//a[contains(@href,'posts/3')]").click
 
     expect { delete_post }.to change{ Post.count }.by -1
     expect(page).to have_content("Post deleted")
