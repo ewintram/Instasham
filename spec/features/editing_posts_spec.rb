@@ -8,7 +8,7 @@ RSpec.feature "editing posts", type: :feature do
   end
 
   scenario "User can edit a post" do
-    find(:xpath, "//a[contains(@href,'posts/7')]").click
+    find(:xpath, "//a[contains(@href,'posts/10')]").click
     click_on "edit"
     fill_in "post[caption]", with: "Edited caption"
     click_on "Update Post"
@@ -19,11 +19,20 @@ RSpec.feature "editing posts", type: :feature do
   end
 
   scenario "User cannot edit a post with a non-image file" do
-    find(:xpath, "//a[contains(@href,'posts/8')]").click
+    find(:xpath, "//a[contains(@href,'posts/11')]").click
     click_on "edit"
     attach_file("post[image]", "spec/files/images/test.xlsx")
     click_on "Update Post"
 
     expect(page).to have_content("Invalid file. Only image files can be uploaded")
+  end
+
+  scenario "User can only edit their own posts" do
+    click_on "sign out"
+    sign_up(email: "david@example.com", username: "dwright", password: "password123", password_confirmation: "password123")
+    visit "/"
+    find(:xpath, "//a[contains(@href,'posts/12')]").click
+
+    expect(page).not_to have_content "edit"
   end
 end
