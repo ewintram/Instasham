@@ -6,11 +6,11 @@ class PostsController < ApplicationController
   end
 
   def new
-    @post = Post.new
+    @post = current_user.posts.build
   end
 
   def create
-    @post = Post.create(post_params)
+    @post = current_user.posts.build(post_params)
     if @post.save
       flash[:success] = "Your post has been shared"
       redirect_to @post
@@ -21,7 +21,6 @@ class PostsController < ApplicationController
   end
 
   def show
-    # @post = Post.find(params[:id])
     @comment = Comment.new
   end
 

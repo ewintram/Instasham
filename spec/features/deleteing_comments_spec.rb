@@ -1,10 +1,10 @@
 require 'rails_helper'
 
 RSpec.feature "deleting comments", type: :feature do
-  before do
-    post = create(:post)
+  before(:each) do
+    sign_up(email: "ellie@example.com", username: "ewintram", password: "password123", password_confirmation: "password123")
+    create_post(caption: "Why not")
     visit "/"
-    # p post
   end
 
   scenario "User can delete a comment" do

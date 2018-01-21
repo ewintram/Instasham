@@ -2,9 +2,9 @@ require 'rails_helper'
 
 RSpec.feature "deleting posts", type: :feature do
   before(:each) do
-    post = create(:post, caption: "To be deleted")
+    sign_up(email: "ellie@example.com", username: "ewintram", password: "password123", password_confirmation: "password123")
+    create_post(caption: "To be deleted")
     visit "/"
-    # p post
   end
 
   scenario "User can delete a post" do

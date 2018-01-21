@@ -2,9 +2,9 @@ require 'rails_helper'
 
 RSpec.feature "editing posts", type: :feature do
   before(:each) do
-    post = create(:post)
+    sign_up(email: "ellie@example.com", username: "ewintram", password: "password123", password_confirmation: "password123")
+    create_post(caption: "#basic")
     visit "/"
-    # p post
   end
 
   scenario "User can edit a post" do

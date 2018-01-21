@@ -1,9 +1,13 @@
 require 'rails_helper'
 
 RSpec.feature "editing comments", type: :feature do
+
+  before do
+    sign_up(email: "ellie@example.com", username: "ewintram", password: "password123", password_confirmation: "password123")
+    create_post(caption: "Y tho")
+  end
+
   scenario "User can edit comments" do
-    post = create(:post)
-    # p post
     visit "/"
     find(:xpath, "//a[contains(@href,'posts/6')]").click
 

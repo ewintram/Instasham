@@ -2,9 +2,9 @@ require 'rails_helper'
 
 RSpec.feature "creating posts", type: :feature do
 
-  # before(:each) do
-  #   sign_up()
-  # end
+  before(:each) do
+    sign_up(email: "ellie@example.com", username: "ewintram", password: "password123", password_confirmation: "password123")
+  end
 
   scenario "User can make a post to instagram" do
     expect{ create_post(caption: "My first post #avotoast") }.to change{ Post.count }.by 1
