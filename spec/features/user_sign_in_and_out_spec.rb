@@ -15,4 +15,12 @@ RSpec.feature "user can sign in and out", type: :feature do
       expect(page).not_to have_content "sign in"
     end
   end
+
+  scenario "only sign up and sign in buttons are visible when signed out" do
+    within "nav" do
+      expect(page).to have_content "sign in"
+      expect(page).not_to have_content "sign out"
+      expect(page).not_to have_content "Welcome ewintram"
+    end
+  end
 end
