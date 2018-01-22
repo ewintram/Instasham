@@ -1,5 +1,7 @@
 class PostsController < ApplicationController
-  before_action :find_post, only: [:show, :edit, :update, :destroy]
+  before_action :set_post, only: [:show, :edit, :update, :destroy, :vote]
+  before_action :authenticate_user!, only: [:vote]
+  respond_to :js, :json, :html
 
   def index
     @posts = Post.all.order("created_at DESC")
@@ -43,13 +45,21 @@ class PostsController < ApplicationController
     redirect_to posts_path
   end
 
+  def vote
+    if !current_user.liked? @post
+      @post.liked_by current_user
+    elsif current_user.liked? @post
+      @post.unliked_by current_user
+    end
+  end
+
   private
 
     def post_params
       params.require(:post).permit(:caption, :image)
     end
 
-    def find_post
+    def set_post
       @post = Post.find(params[:id])
     end
 
