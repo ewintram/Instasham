@@ -2,13 +2,7 @@
 
 ## Description
 
-This is an Instagram clone web app which allows users to register an account, post photos with captions, comment on and like photos.
-
-MVC diagram
-![alt text](/public/Instasham-MVC.png "Instasham MVC diagram")
-
-Database structure
-![alt text](/public/Instasham-database-structure.jpg "Instasham database structure")
+This is an Instagram clone web app which allows users to register an account, post photos with captions, comment on and like photos. See more about my [design process](#design-process).
 
 ## Setup
 
@@ -68,6 +62,13 @@ Testing is in RSpec and Capybara. To run the tests on the command line, run
 
 Eleanor Wintram
 
+## Design process
+
+*MVC diagram*
+![alt text](/public/Instasham-MVC.png "Instasham MVC diagram")
+
+*Database structure*
+![alt text](/public/Instasham-database-structure.jpg "Instasham database structure")
 
 ### User stories
 
