@@ -43,11 +43,5 @@
     <%= render "comments/form" %>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-<script><% if current_user.liked? @post %>
-  $(".like-btn").addClass("liked");
-<% else %>
-  $(".like-btn").addClass(".like-btn");
-<% end %>
-$(".likes-count").html("<%= @post.get_upvotes.size %>")</script>
   </body>
 </html>
