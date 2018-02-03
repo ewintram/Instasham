@@ -1,6 +1,18 @@
 <% if current_user.liked? @post %>
   $(".like-btn").addClass("liked");
 <% else %>
-  $(".like-btn").addClass(".like-btn");
+  $(".like-btn").removeClass("liked");
 <% end %>
 $(".likes-count").html("<%= @post.get_upvotes.size %>")
+
+
+$('#toggle').on('click', function () {
+    var iSelector = $(".like-btn");
+    if (iSelector.hasClass('glyphicon-heart-empty')) {
+        iSelector.removeClass('glyphicon-heart-empty')
+        iSelector.addClass('glyphicon-heart')
+    } else if (iSelector.hasClass('glyphicon-heart')) {
+        iSelector.removeClass('glyphicon-heart')
+        iSelector.addClass('glyphicon-heart-empty')
+    }
+});

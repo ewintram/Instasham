@@ -6,14 +6,13 @@
     </title>
   </head>
   <body>
-    <h1>Instagram</h1>
-    <table>
+    <table class="post">
       <% @posts.each do |post| %>
         <tr>
-          <th><%= post.user.username %></th>
+          <th class="head"><%= post.user.username %></th>
         </tr>
         <tr>
-          <td><%= link_to(image_tag(post.image.url(:medium)), post_path(post)) %></td>
+          <td class="image"><%= link_to(image_tag(post.image.url(:medium)), post_path(post)) %></td>
         </tr>
         <tr>
           <td><%= post.caption %></td>

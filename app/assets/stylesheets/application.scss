@@ -13,3 +13,43 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  background-color: #fafafa;
+  font-family: proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
+.navbar-container {
+  max-width: 640px;
+  margin: 0 auto;
+}
+.post {
+  background-color: #fff;
+  border-color: #edeeee;
+  margin: auto;
+  border-style: solid;
+  border-radius: 3px;
+  border-width: 1px;
+  margin-bottom: 60px;
+}
+th.head {
+  flex-direction: row;
+  height: 64px;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 24px;
+  color: #125688;
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 500;
+}
+
+
+.welcome-message {
+  padding: 10px;
+}
