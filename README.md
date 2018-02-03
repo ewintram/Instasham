@@ -1,27 +1,60 @@
-# README
+# Instasham
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Description
 
-Things you may want to cover:
+This is an Instagram clone web app which allows users to register an account, post photos with captions, comment on and like photos.
 
-* Ruby version
+(diagram)
 
-* System dependencies
 
-* Configuration
+## Setup
 
-* Database creation
+Check that you have ruby installed
 
-* Database initialization
+`ruby -v`
 
-* How to run the test suite
+If not, install instructions can be found [here](https://www.ruby-lang.org/en/documentation/installation/).
 
-* Services (job queues, cache servers, search engines, etc.)
+Clone the repo on the command line by running
 
-* Deployment instructions
+`git clone git@github.com:ewintram/instagram-challenge.git`
 
-* ...
+Install dependencies by running
+
+`bundle`
+
+Create the databases by running
+
+`rake db:setup`
+
+Migrate the table schema by running
+
+`rake db:migrate`
+
+
+## Usage
+
+To launch the app, run
+
+`rails s`
+
+
+Navigate to `http://localhost:3000`
+
+(screen grabs)
+
+
+## Running tests
+
+Testing is in RSpec and Capybara. To run the tests on the command line, run
+
+`rspec`
+
+
+## Author
+
+Eleanor Wintram
+
 
 ### User stories
 
@@ -30,19 +63,19 @@ Things you may want to cover:
 ```
 As a user
 So that I can show an online audience that my breakfast habits are on fleek
-I want to post a photo of my breakfast on my Instagram page with a caption
+I want to post a photo of my breakfast on my Instasham page with a caption
 ```
 
 ```
 As a user
 In case avocado on toast is no longer on trend
-I want to be able to delete my post from my Instagram page
+I want to be able to delete my post from my Instasham page
 ```
 
 ```
 As a user
-So that I can compliment my friends breakfast photos
-I want to be able to comment on other's photos
+So that I can compliment my friend's breakfast photos
+I want to be able to comment on other users' photos
 ```
 
 ```
@@ -109,10 +142,10 @@ In case I regret making a comment on a photo
 I want to edit or delete my comments
 ```
 
-*Step 4 - Bonus feature*
+*Step 4 - Bonus feature still to be implemented*
 
 ```
 As a user
-So that I can look tanned and glowing all year round
+So that I can have the 'glow' all year round
 I want to apply filters to my photos
 ```
