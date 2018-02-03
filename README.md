@@ -4,8 +4,11 @@
 
 This is an Instagram clone web app which allows users to register an account, post photos with captions, comment on and like photos.
 
-(diagram)
+MVC diagram
+![alt text](/public/Instasham-MVC.png "Instasham MVC diagram")
 
+Database structure
+![alt text](/public/Instasham-database-structure.jpg "Instasham database structure")
 
 ## Setup
 
@@ -19,6 +22,14 @@ Clone the repo on the command line by running
 
 `git clone git@github.com:ewintram/instagram-challenge.git`
 
+Check that you have bundler installed
+
+`bundler -v`
+
+If not, install by running
+
+`gem install bundler`
+
 Install dependencies by running
 
 `bundle`
@@ -30,6 +41,8 @@ Create the databases by running
 Migrate the table schema by running
 
 `rake db:migrate`
+
+Paperclip is used for photo attachment management with ActiveRecord. To use the Paperclip gem, ImageMagick must be installed. Installation instructions can be found on the [Paperclip GitHub page](https://github.com/thoughtbot/paperclip).
 
 
 ## Usage
