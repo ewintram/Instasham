@@ -6,22 +6,20 @@
     </title>
   </head>
   <body>
-    <table>
+    <table class="post-bottom">
       <th>
-        <%= User.find(comment.user_id).username %>
+        <td class="user-name"><%= User.find(comment.user_id).username %></td>
+        <td class="comment-content"><%= comment.comment %></td>
+        <td class="delete-edit-comment">
+          <%= link_to "edit comment", edit_post_comment_path(@post, comment) %>
+          <%= link_to "delete comment", [comment.post, comment],
+                       method: :delete,
+                       data: { confirm: 'Are you sure?' }  %>
+        </td>
       </th>
-      <tr>
-        <td><%= comment.comment %></td>
-      </tr>
       <% if user_signed_in? %>
         <% if comment.user_id == current_user.id %>
           <tr>
-            <td>
-              <%= link_to "edit comment", edit_post_comment_path(@post, comment) %>
-              <%= link_to "delete comment", [comment.post, comment],
-                           method: :delete,
-                           data: { confirm: 'Are you sure?' }  %>
-            </td>
           </tr>
         <% end %>
       <% end %>

@@ -6,19 +6,21 @@
     </title>
   </head>
   <body>
-    <%= simple_form_for @post, local: true do |form| %>
-      <p>
-        <%= form.input :image %>
-      </p>
+    <div>
+      <%= simple_form_for @post, local: true do |form| %>
+        <p>
+          <%= form.input :image %>
+        </p>
 
-      <p>
-        <%= form.input :caption %><br>
-      </p>
+        <p>
+          <%= form.input :caption %><br>
+        </p>
 
-      <p>
-        <%= form.button :submit %>
-      </p>
+        <p>
+          <%= form.button :submit %>
+        </p>
 
-    <% end %>
+      <% end %>
+    </div>
   </body>
 </html>

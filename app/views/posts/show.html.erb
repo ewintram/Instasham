@@ -6,16 +6,18 @@
     </title>
   </head>
   <body>
-    <post>
-      <p>
+    <div class="post">
+      <p class="head">
         <%= @post.user.username %>
       </p>
-      <%= image_tag @post.image.url(:medium) %>
-      <p>
+      <p class="image">
+        <%= image_tag @post.image.url(:medium) %>
+      </p>
+      <p class="caption">
         <%= @post.caption %>
       </p>
-    </post>
-    <p>
+    </div>
+    <p class="post-bottom">
       <%= link_to "back", posts_path %>
       <% if user_signed_in? %>
         <% if @post.user_id == current_user.id %> |

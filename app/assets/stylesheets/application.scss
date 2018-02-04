@@ -24,10 +24,12 @@ body {
   background-color: #fafafa;
   font-family: proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
 }
+
 .navbar-container {
   max-width: 640px;
   margin: 0 auto;
 }
+
 .post {
   background-color: #fff;
   border-color: #edeeee;
@@ -37,6 +39,7 @@ body {
   border-width: 1px;
   margin-bottom: 60px;
 }
+
 th.head {
   flex-direction: row;
   height: 64px;
@@ -48,6 +51,30 @@ th.head {
   line-height: 18px;
   font-weight: 500;
 }
+
+.post-bottom {
+  .caption {
+    margin-bottom: 7px;
+  }
+  .user-name {
+    font-weight: 500;
+    color: #125688;
+    font-size: 15px;
+  }
+  .delete-edit-comment {
+    float: right;
+    color: #515151;
+  }
+  .comment-content {
+    padding-left: 10px;
+    font-size: 15px;
+    line-height: 18px;
+    border: medium none;
+    width: 50%;
+    color: #4B4F54;
+  }
+}
+
 
 
 .welcome-message {
