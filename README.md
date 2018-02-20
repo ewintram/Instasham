@@ -48,8 +48,6 @@ To launch the app, run
 
 Navigate to `http://localhost:3000`
 
-(screen grabs)
-
 
 ## Running tests
 
