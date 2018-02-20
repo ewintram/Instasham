@@ -50,7 +50,7 @@ Navigate to `http://localhost:3000`
 
 
 
-![screenshot of 'posts' page](screenshot.png "Screenshot of 'posts' page")
+![screenshot of 'posts' page](Screenshot.png "Screenshot of 'posts' page")
 
 ## Running tests
 
