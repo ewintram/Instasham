@@ -49,6 +49,9 @@ To launch the app, run
 Navigate to `http://localhost:3000`
 
 
+
+![screenshot of 'posts' page](screenshot.png "Screenshot of 'posts' page")
+
 ## Running tests
 
 Testing is in RSpec and Capybara. To run the tests on the command line, run

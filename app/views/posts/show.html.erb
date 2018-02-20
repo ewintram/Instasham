@@ -11,7 +11,7 @@
         <%= @post.user.username %>
       </p>
       <p class="image">
-        <%= image_tag @post.image.url(:medium) %>
+        <%= image_tag(@post.image.url(:medium), width: "500") %>
       </p>
       <p class="caption">
         <%= @post.caption %>

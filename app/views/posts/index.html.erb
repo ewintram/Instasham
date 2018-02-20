@@ -12,7 +12,7 @@
           <th class="head"><%= post.user.username %></th>
         </tr>
         <tr>
-          <td class="image"><%= link_to(image_tag(post.image.url(:medium)), post_path(post)) %></td>
+          <td class="image"><%= link_to(image_tag(post.image.url(:medium), width: "500"), post_path(post)) %></td>
         </tr>
         <tr>
           <td><%= post.caption %></td>
