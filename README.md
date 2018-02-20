@@ -63,12 +63,14 @@ Eleanor Wintram
 ## Design process
 
 *MVC diagram*
+
 ![alt text](/public/Instasham-MVC.png "Instasham MVC diagram")
 
 *Database structure*
+
 ![alt text](/public/Instasham-database-structure.jpg "Instasham database structure")
 
-With more time I hope to finish implementing the 'likes' feature and improve the styling, eventually adding the 'filters' feature.
+
 
 ### User stories
 
@@ -155,6 +157,8 @@ As a user
 In case I regret making a comment on a photo
 I want to edit or delete my comments
 ```
+
+With more time I hope to finish implementing the 'likes' feature and improve the styling, eventually adding the 'filters' feature.
 
 *Step 4 - Bonus feature still to be implemented*
 
