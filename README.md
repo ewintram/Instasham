@@ -2,7 +2,7 @@
 
 ## Description
 
-This is an Instagram clone web app which allows users to register an account, post photos with captions, comment on and like photos. See more about my [design process](#design-process).
+This is an Instagram clone web app which allows users to register an account, post photos with captions, comment on and like photos. The app is written in Ruby on Rails and was my second application built with this framework. It also uses Bootstrap for styling and a little JQuery to display 'likes' on posts. See more about my [design process](#design-process).
 
 ## Setup
 
@@ -69,6 +69,8 @@ Eleanor Wintram
 
 *Database structure*
 ![alt text](/public/Instasham-database-structure.jpg "Instasham database structure")
+
+With more time I hope to finish implementing the 'likes' feature and improve the styling, eventually adding the 'filters' feature.
 
 ### User stories
 
